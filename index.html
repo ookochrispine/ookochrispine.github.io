@@ -14,56 +14,72 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
     <!-- Slideshow CSS - Added Here -->
     <style>
-        /* Custom Slideshow for Featured Project */
-        .slideshow-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden; /* Prevents layout issues */
-        }
+     /* Custom Slideshow for Featured Project */
+     .slideshow-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
 
-        .slideshow-container img {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0;
-            transition: opacity 1.5s ease-in-out;
-        }
+    .slideshow-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1.5s ease-in-out;
+    }
 
-        .slideshow-container img:first-child {
-            opacity: 1;
-            z-index: 1;
-        }
+    .slideshow-container img:first-child {
+        opacity: 1;
+        z-index: 1;
+    }
 
-        /* 3 images × 3 seconds = 9-second cycle */
-        @keyframes slideshow {
-            0%    { opacity: 1; }
-            30%   { opacity: 1; }
-            33.33% { opacity: 0; }
-            96.66% { opacity: 0; }
-            100%  { opacity: 0; }
-        }
+    /* 3 images × 3 seconds = 9-second cycle */
+    @keyframes slideshow {
+        0%    { opacity: 1; }
+        30%   { opacity: 1; }
+        33.33% { opacity: 0; }
+        96.66% { opacity: 0; }
+        100%  { opacity: 0; }
+    }
 
-        .slideshow-container img:nth-child(1) {
-            animation: slideshow 9s infinite 0s;
-        }
+    .slideshow-container img:nth-child(1) {
+        animation: slideshow 9s infinite 0s;
+    }
 
-        .slideshow-container img:nth-child(2) {
-            animation: slideshow 9s infinite 3s;
-        }
+    .slideshow-container img:nth-child(2) {
+        animation: slideshow 9s infinite 3s;
+    }
 
-        .slideshow-container img:nth-child(3) {
-            animation: slideshow 9s infinite 6s;
-        }
+    .slideshow-container img:nth-child(3) {
+        animation: slideshow 9s infinite 6s;
+    }
 
-        /* Optional: Pause on hover */
-        .slideshow-container:hover img {
-            animation-play-state: paused;
-        }
-    </style>
+    /* Pause on hover */
+    .slideshow-container:hover img {
+        animation-play-state: paused;
+    }
+
+    /* === FIX FOR MASSIVELY TEMPLATE === */
+    .post.featured .image.main {
+        position: relative;
+        height: 80vh; /* Makes it tall and prominent */
+        min-height: 500px;
+        margin: 0;
+        padding: 0;
+        background: none !important;
+        overflow: hidden;
+    }
+
+    .post.featured .image.main * {
+        display: block !important;
+        visibility: visible !important;
+    }
+   </style>
 </head>
 
 <body class="is-preload">
@@ -241,6 +257,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 </body>
 </html>
+
 
 
 
